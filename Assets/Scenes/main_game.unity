@@ -221,6 +221,7 @@ GameObject:
   - component: {fileID: 1069064443}
   - component: {fileID: 1069064447}
   - component: {fileID: 1069064448}
+  - component: {fileID: 1069064449}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -329,8 +330,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1069064442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.3, y: -1.96, z: 0}
-  m_LocalScale: {x: 3.7954667, y: 3.7954667, z: 3.7954667}
+  m_LocalPosition: {x: -6.56, y: -2.59, z: 0}
+  m_LocalScale: {x: 3.160485, y: 3.160485, z: 3.160485}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -364,7 +365,101 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f37bc1e53eda9b42963e9729db47993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jump_height: 3
+  jump_height: 6
+--- !u!114 &1069064449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069064442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 3031ff9183c99e341a3d1d9be7ff1c2e, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1069064442}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 020b1ef8-ce52-4695-af3f-494fe73a82eb
+    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f29864a7-bbd8-441f-bc97-04073c8a3498
+    m_ActionName: Player/Look[/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 57160113-af20-48b3-bf04-10998546546b
+    m_ActionName: Player/Fire[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 62d0eb1a-f9b8-4e60-acb0-6d83d37678bd
+    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5ea50496-3289-44b2-b59b-24c26af874ad
+    m_ActionName: UI/Submit[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 759be207-e846-4a5b-8533-f5503544ccef
+    m_ActionName: UI/Cancel[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 70e05302-c73f-4721-ac14-8643c683fd83
+    m_ActionName: UI/Point[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d701e390-2c37-4889-a9f7-a4ba2dca6ea9
+    m_ActionName: UI/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: db72cd22-279b-42e6-8287-cb3f1d3415b4
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7fb5eabc-b390-4578-bb60-a723b8fb14c9
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7b2a229d-7a33-400b-9a93-6a5751d4812b
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 49c48a09-7fe6-403f-ad30-517c934b99b7
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4d4d91c7-6dba-4e80-8a0d-d0bbe626479c
+    m_ActionName: UI/TrackedDeviceOrientation
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Keyboard&Mouse
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1926961724
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,7 +474,7 @@ GameObject:
   - component: {fileID: 1926961728}
   m_Layer: 0
   m_Name: ground
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -430,7 +525,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 113.53596, y: 8.358389}
+  m_Size: {x: 374.10614, y: 8.358389}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -444,8 +539,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1926961724}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.5925, y: -4.079, z: 0}
-  m_LocalScale: {x: 0.2414872, y: 0.24148722, z: 0.2414872}
+  m_LocalPosition: {x: 7.2178, y: -4.3465, z: 0}
+  m_LocalScale: {x: 0.081979506, y: 0.1774897, z: 0.1730256}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -461,7 +556,7 @@ Animator:
   m_GameObject: {fileID: 1926961724}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cb7fec96363bdd244b645edce5a90469, type: 2}
+  m_Controller: {fileID: 9100000, guid: cfb04ebf98d0ede41b9680059ff6dcd5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -484,16 +579,16 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.07882309, y: 0}
+  m_Offset: {x: -0.37943268, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0.42999998, y: 0, z: 0.84999996, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 41.71, y: 8.350146}
-    newSize: {x: 113.53596, y: 8.358389}
+    newSize: {x: 374.10614, y: 8.358389}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 114.38384, y: 8.350146}
+  m_Size: {x: 373.0575, y: 8.350146}
   m_EdgeRadius: 0
