@@ -366,6 +366,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jump_height: 6
+  jump_count: 1
+  jump_delay: 0.2
 --- !u!114 &1069064449
 MonoBehaviour:
   m_ObjectHideFlags: 0
