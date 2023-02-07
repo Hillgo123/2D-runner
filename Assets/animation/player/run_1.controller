@@ -35,7 +35,7 @@ BlendTree:
   m_Childs:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 75688c1bf2351c746bb440d140936d73, type: 2}
-    m_Threshold: -1
+    m_Threshold: -0.9955673
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -43,7 +43,7 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 55bb4464f7b748249be58fe45944b054, type: 2}
-    m_Threshold: 1
+    m_Threshold: 0.89719623
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -51,8 +51,8 @@ BlendTree:
     m_Mirror: 0
   m_BlendParameter: y_velocity
   m_BlendParameterY: Blend
-  m_MinThreshold: -1
-  m_MaxThreshold: 1
+  m_MinThreshold: -0.9955673
+  m_MaxThreshold: 0.89719623
   m_UseAutomaticThresholds: 0
   m_NormalizedBlendValues: 0
   m_BlendType: 0
@@ -133,12 +133,6 @@ AnimatorController:
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Blend
-    m_Type: 1
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
-  - m_Name: x_velocity
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0

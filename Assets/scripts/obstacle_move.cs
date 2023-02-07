@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class obstacle_move : MonoBehaviour
 {
-
+    // Public variables
     public float speed;
 
-    // Update is called once per frame
     void Update()
     {
+        // Move the obstacle to the left
         transform.position += Vector3.left * speed * Time.deltaTime;
     }
 }
