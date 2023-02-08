@@ -51,12 +51,6 @@ public class movement : MonoBehaviour
             // Update the animator
             animator.SetBool("jump", false);
         }
-
-        // If the player collides with a spike we set the game state to game_over
-        if (collision.gameObject.tag == "spike")
-        {
-            game_manager.instance.set_game_state(game_state.game_over);
-        }
     }
 
     private void jump()
