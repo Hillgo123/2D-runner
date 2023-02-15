@@ -25,7 +25,7 @@ public class spawner : MonoBehaviour
         // Add the obstacles to the list
         obstacles.Add(obstacle_1);
         obstacles.Add(obstacle_2);
-        // obstacles.Add(obstacle_3);
+        obstacles.Add(obstacle_3);
         // obstacles.Add(obstacle_4);
         // obstacles.Add(obstacle_5);
 

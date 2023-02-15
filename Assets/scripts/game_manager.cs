@@ -14,6 +14,7 @@ public class game_manager : MonoBehaviour
     public static event Action<game_state> on_game_state_changed;
 
     public bool audio;
+    public bool is_paused;
 
 
     // Game objects
@@ -30,7 +31,7 @@ public class game_manager : MonoBehaviour
     public GameObject audio_off_icon_pause;
 
     // Audio
-    public AudioSource start_screen_audio;
+    public AudioSource menu_audio;
     public AudioSource main_game_audio;
     public AudioSource game_over_audio;
 
@@ -83,6 +84,8 @@ public class game_manager : MonoBehaviour
     public void start()
     {
         // Audio
+        menu_audio.Play();
+        menu_audio.loop = true;
 
         // Activating the correct game objects
         player.SetActive(false);
@@ -98,6 +101,7 @@ public class game_manager : MonoBehaviour
     public void main_game()
     {
         // Audio
+        menu_audio.Stop();
         main_game_audio.Play();
         main_game_audio.loop = true;
 
@@ -148,7 +152,7 @@ public class game_manager : MonoBehaviour
     public void reset()
     {
         // We reset the player position
-        player.transform.position = new Vector2(-5.804f, -2.8007f);
+        player.transform.position = new Vector2(-7.64f, -2.91f);
         rb_player.velocity = Vector3.zero;
 
         // Reset the score
@@ -171,7 +175,7 @@ public class game_manager : MonoBehaviour
         audio_off_icon_start.SetActive(false);
         audio_off_icon_pause.SetActive(false);
 
-        // start_screen_audio.mute = false;
+        menu_audio.mute = false;
         main_game_audio.mute = false;
         // game_over_audio.mute = false;
 
@@ -187,7 +191,7 @@ public class game_manager : MonoBehaviour
         audio_on_icon_start.SetActive(false);
         audio_on_icon_pause.SetActive(false);
 
-        // start_screen_audio.mute = true;
+        menu_audio.mute = true;
         main_game_audio.mute = true;
         // game_over_audio.mute = true;
 

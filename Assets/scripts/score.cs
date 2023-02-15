@@ -9,10 +9,16 @@ public class score : MonoBehaviour
     public TextMeshProUGUI score_text;
     public TextMeshProUGUI game_over_score_text;
     public TextMeshProUGUI high_score_text;
+    public TextMeshProUGUI collectible_text;
 
     public int current_score;
     public int high_score;
+    public int collectible_counter;
     private float score_counter;
+
+
+    public GameObject collectible;
+    Animator collectible_animator;
 
     void Start()
     {
@@ -20,6 +26,11 @@ public class score : MonoBehaviour
         current_score = 0;
         high_score = 0;
         score_text.text = current_score.ToString();
+
+        collectible_counter = 0;
+        collectible_text.text = collectible_counter.ToString();
+
+        collectible_animator = collectible.GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -41,6 +52,17 @@ public class score : MonoBehaviour
         if (current_score > high_score)
         {
             high_score = current_score;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "pick_up")
+        {
+            collectible_counter++;
+            collectible_animator.SetBool("picked_up", true);
+            collectible_text.text = collectible_counter.ToString();
+            Destroy(collision.gameObject, 2);
         }
     }
 }
