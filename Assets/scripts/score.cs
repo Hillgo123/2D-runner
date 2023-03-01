@@ -10,15 +10,14 @@ public class score : MonoBehaviour
     public TextMeshProUGUI game_over_score_text;
     public TextMeshProUGUI high_score_text;
     public TextMeshProUGUI collectible_text;
+    public TextMeshProUGUI game_over_collectible_text;
 
     public int current_score;
     public int high_score;
     public int collectible_counter;
     private float score_counter;
 
-
-    public GameObject collectible;
-    Animator collectible_animator;
+    public AudioSource collectible_audio;
 
     void Start()
     {
@@ -29,8 +28,7 @@ public class score : MonoBehaviour
 
         collectible_counter = 0;
         collectible_text.text = collectible_counter.ToString();
-
-        collectible_animator = collectible.GetComponent<Animator>();
+        game_over_collectible_text.text = collectible_counter.ToString();
     }
 
     void FixedUpdate()
@@ -59,10 +57,15 @@ public class score : MonoBehaviour
     {
         if (collision.gameObject.tag == "pick_up")
         {
+            if (game_manager.instance.audio)
+            {
+                collectible_audio.Play();
+            }
+
             collectible_counter++;
-            collectible_animator.SetBool("picked_up", true);
             collectible_text.text = collectible_counter.ToString();
-            Destroy(collision.gameObject, 2);
+            game_over_collectible_text.text = collectible_counter.ToString();
+            Destroy(collision.gameObject);
         }
     }
 }

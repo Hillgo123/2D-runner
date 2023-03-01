@@ -26,8 +26,8 @@ public class spawner : MonoBehaviour
         obstacles.Add(obstacle_1);
         obstacles.Add(obstacle_2);
         obstacles.Add(obstacle_3);
-        // obstacles.Add(obstacle_4);
-        // obstacles.Add(obstacle_5);
+        obstacles.Add(obstacle_4);
+        obstacles.Add(obstacle_5);
 
         // Create the first obstacle
         GameObject new_obstacle = Instantiate(obstacles[Random.Range(0, obstacles.Count)]);

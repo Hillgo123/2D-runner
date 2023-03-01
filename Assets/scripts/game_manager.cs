@@ -14,8 +14,6 @@ public class game_manager : MonoBehaviour
     public static event Action<game_state> on_game_state_changed;
 
     public bool audio;
-    public bool is_paused;
-
 
     // Game objects
     public GameObject player;
@@ -33,7 +31,6 @@ public class game_manager : MonoBehaviour
     // Audio
     public AudioSource menu_audio;
     public AudioSource main_game_audio;
-    public AudioSource game_over_audio;
 
     Rigidbody2D rb_player;
 
@@ -177,7 +174,6 @@ public class game_manager : MonoBehaviour
 
         menu_audio.mute = false;
         main_game_audio.mute = false;
-        // game_over_audio.mute = false;
 
         audio = true;
     }
@@ -193,7 +189,6 @@ public class game_manager : MonoBehaviour
 
         menu_audio.mute = true;
         main_game_audio.mute = true;
-        // game_over_audio.mute = true;
 
         audio = false;
     }
